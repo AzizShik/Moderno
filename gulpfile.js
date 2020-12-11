@@ -9,16 +9,25 @@ let gulp = require('gulp'),
 
 
 gulp.task('scripts', function () {
-	return gulp.src(['node_modules/slick-carousel/slick/slick.js', 'node_modules/magnific-popup/dist/jquery.magnific-popup.js', 'node_modules/mixitup/dist/mixitup.js'])
+	return gulp.src([
+		'vendor/slick-1.8.1/slick.js',
+		'vendor/mixitup/mixitup.js',
+		'vendor/rateyo/jquery.rateyo.js'
+	])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('app/js'))
 });
 
 gulp.task('style', function () {
-	return gulp.src(['node_modules/normalize.css/normalize.css', 'node_modules/slick-carousel/slick/slick.css', 'node_modules/magnific-popup/dist/jquery.magnific-popup.css'])
-		.pipe(concat('libs.css'))
-		.pipe()
+	return gulp.src([
+		'vendor/normalize/normalize.css',
+		'vendor/slick-1.8.1/slick.css',
+		'vendor/slick-1.8.1/slick-theme.css',
+		'vendor/rateyo/jquery.rateyo.css'
+	])
+		.pipe(concat('libs.min.css'))
+		.pipe(cssmin())
 		.pipe(gulp.dest('app/css'))
 });
 
@@ -59,4 +68,4 @@ gulp.task('watch', function () {
 	gulp.watch('app/js/*.js', gulp.parallel('js'))
 });
 
-gulp.task('default', gulp.parallel('scripts', 'sass', 'watch', 'browser-sync'))
+gulp.task('default', gulp.parallel('style', 'scripts', 'sass', 'watch', 'browser-sync'))
