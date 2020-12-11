@@ -1,0 +1,38 @@
+.author{
+  background: url('../images/content/authors-bg.jpg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 761px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.author__box{
+  margin: 0 auto;
+  padding: 70px 60px 85px;
+  max-width: 653px;
+  min-height: 216px;
+  width: 100%;
+  background-color: $green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.author__title{
+  max-width: 300px;
+  min-height: 60px;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+  span{
+    @include f700;
+  }
+}
+.author__link{
+  color: #263238;
+  font-size: 18px;
+  background-color: #ffffff;
+  padding: 25px 40px;
+  border-radius: 3px;
+}

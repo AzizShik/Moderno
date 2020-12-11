@@ -7,12 +7,12 @@
   color: #ffffff;
   &-title{
     font-size: 48px;
-    font-weight: 700;
+    @include f700;
   }
   &-text{
     margin-top: 35px;
     font-size: 20px;
-    font-weight: 500;
+    @include f500;
   }
   &-form{
     margin: 0 auto;
@@ -28,7 +28,7 @@
       padding: 20px 60px 25px 25px;
       border-radius: 4px;
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
       letter-spacing: 0.7px;
       
       &::placeholder{
