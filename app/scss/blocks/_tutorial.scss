@@ -1,0 +1,31 @@
+.tutorial{
+  padding: 60px 0 105px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  &__item{
+    max-width: 370px;
+    width: 100%;
+    min-height: 370px;
+    margin-bottom: 15px;
+    background-color: #f8f8f8;
+    img{
+      width: 100%;
+    }
+    .tutorial__item-name{
+      border-radius: 2px;
+      padding: 0px 10px;
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a{
+      color: #263238;
+      font-size: 24px;
+      @include f700;
+    }
+  }
+}
